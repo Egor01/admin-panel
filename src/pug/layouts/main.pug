@@ -1,0 +1,79 @@
+include ../mixins/_mixins.pug
+
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		title #{title}
+		
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		<![endif]-->
+		
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		
+		//- meta(name="keywords", content=`${keywords}`)
+		//- meta(name="description" content=`${desc}`)
+
+		meta(name="keywords", content="")
+		meta(name="description" content="")
+		
+		<!-- build:cssVendor css/vendor.css -->
+		link(rel="stylesheet", href="libs/normalize-css/normalize.css")
+		link(rel="stylesheet", href="libs/bootstrap-4-grid/grid.min.css")
+		link(rel="stylesheet", href="libs/font-awesome-v5/fontawesome-free/css/all.min.css")
+		//- link(rel="stylesheet", href="libs/magnific-popup/magnific-popup.css")
+		//- link(rel="stylesheet", href="libs/wow.js/css/libs/animate.css")
+		//- link(rel="stylesheet", href="libs/owl-carousel/assets/owl.carousel.min.css")
+		//- link(rel="stylesheet", href="libs/owl-carousel/assets/owl.theme.default.min.css")
+
+
+		<!-- endbuild -->
+
+		//- styles for cdn
+		link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
+
+		//- favicons
+		link(rel="icon" href="img/favicons/favicon-48x48.png"  type="image/x-icon")
+		link(rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png")
+
+		<!-- build:cssCustom css/main.css -->
+		link(rel="stylesheet", href="css/main.css")
+		<!-- endbuild -->
+
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+		
+	body(class=pageClass)
+		
+		block content
+
+
+		<!-- build:jsLibs js/libs.js -->
+		script(src="libs/jquery/jquery.min.js")
+		//- script(src="libs/jquery-parallax.js/parallax.min.js")
+		//- script(src="libs/magnific-popup/jquery.magnific-popup.min.js")
+		//- script(src="libs/jquery-validation/jquery.validate.min.js")
+		//- script(src="libs/wow.js/dist/wow.min.js")
+		//- script(src="libs/mixitup3/mixitup.min.js")
+		//- script(src="libs/owl-carousel/owl.carousel.min.js")
+		//- script(src="libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js")
+
+		<!-- endbuild -->
+
+		<!-- build:jsVendor js/vendor.js -->
+		block scripts
+		<!-- endbuild -->
+
+		//- scripts for cdn
+		block scripts
+			script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+			//- <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter47013852 = new Ya.Metrika({ id:47013852, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/47013852" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+
+		<!-- build:jsMain js/main.js -->
+		script(src="js/main.js")
+		<!-- endbuild -->
